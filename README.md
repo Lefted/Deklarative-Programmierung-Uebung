@@ -1,2 +1,2 @@
 # Deklarative-Programmierung-Uebung
-Aufgaben aus Deklarativer Programmierung Übung
+Lösungen zu den Übungen der Vorlesung Deklarative Programmierung Übung aus dem Wintersemester 2022/23
