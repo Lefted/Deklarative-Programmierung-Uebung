@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry>
+	<rechnungen>
+		<rechnung>
+			<unternehmer>
+				<anschrift>
+					<firmen-name>Kleintier Meier GmbH</firmen-name>
+					<strasse>Meierring</strasse>
+					<haus-nummer>3</haus-nummer>>
+					<postleitzahl>81828</postleitzahl>
+					<stadt>Machthausen</stadt>
+					<telefon>
+						<vorwahl>0777</vorwahl>>
+						<nummer>987987</nummer>>
+					</telefon>>
+					<fax>
+						<vorwahl>0777</vorwahl>>
+						<nummer>987789</nummer>
+					</fax>
+					<e-mail>klein.meier@tiere.de</e-mail>
+				</anschrift>
+				<steuernummer>88 123/8282 2</steuernummer>>
+			</unternehmer>
+			<leistungs-empfaenger>
+				<anrede>Frau</anrede>>
+				<vorname>Sybille</vorname>>
+				<nachname>Sonder-Suttelrau</nachname>>
+				<strasse>Am Süttelbach</strasse>>
+				<haus-nummer>17</haus-nummer>>
+				<postleitzahl>77070</postleitzahl>>
+				<stadt>Siedelsuderstadt</stadt>>
+			</leistungs-empfaenger>>
+			<ausstellungsdatum>2017-01-15</ausstellungsdatum>>
+			<rechnungsnummer>657321</rechnungsnummer>>
+			<entgeld>962.22</entgeld>>
+		</rechnung>
+	</rechnungen>
+</entry>
