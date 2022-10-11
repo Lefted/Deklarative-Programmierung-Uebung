@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE a [
+	<!ELEMENT a ((x,y,z) | (y,x,z) | (x,z,y) | (y,z,x))> <!-- NOT SHURE -->
+	<!ELEMENT x EMPTY>
+	<!ELEMENT y EMPTY>
+	<!ELEMENT z EMPTY>
+]>

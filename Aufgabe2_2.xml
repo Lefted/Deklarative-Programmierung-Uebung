@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sport-event [
+	<!ELEMENT sport-event (match+)>
+	<!ELEMENT match ((name | team)+, result?)>
+	<!ELEMENT team (#PCDATA | member)*>
+	<!ATTLIST sport-event 	tournament CDATA #FIXED "true"
+							name (tennis | fussball) #REQUIRED>
+]>
