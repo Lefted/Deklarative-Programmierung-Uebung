@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT rechnungen (rechnung)*>
+<!ELEMENT rechnung (unternehmer, leistungs-empfaenger, ausstellungsdatum, rechnungsnummer, entgelt, abrechnungs-positionen)>
+<!ELEMENT unternehmer (anschrift, (steuernummer | umsatzsteuer-identifikationsnummer))>
+<!ELEMENT anschrift (firmen-name, postleitzahl, stadt, strasse, haus-nummer, telefon, fax, e-mail?)>
+<!ELEMENT firmen-name (#PCDATA)>
+<!ELEMENT postleitzahl (#PCDATA)>
+<!ELEMENT stadt (#PCDATA)>
+<!ELEMENT strasse (#PCDATA)>
+<!ELEMENT haus-nummer (#PCDATA)>
+<!ELEMENT telefon (vorwahl, nummer)>
+<!ELEMENT vorwahl (#PCDATA)>
+<!ELEMENT nummer (#PCDATA)>
+<!ELEMENT fax (vorwahl, nummer)>
+<!ELEMENT e-mail (#PCDATA)>
+<!ELEMENT steuernummer (#PCDATA)>
+<!ELEMENT umsatzsteuer-identifikationsnummer (#PCDATA)>
+<!ELEMENT leistungs-empfaenger (anrede, vorname, nachname, postleitzahl, stadt, strasse, haus-nummer)>
+<!ELEMENT anrede (#PCDATA)>
+<!ELEMENT vorname (#PCDATA)>
+<!ELEMENT nachname (#PCDATA)>
+<!ELEMENT ausstellungsdatum (#PCDATA)>
+<!ELEMENT rechnungsnummer (#PCDATA)>
+<!ELEMENT entgelt (rechnungsbetrag, nettobetrag, mehrwertsteuer-gesamt)>
+<!ELEMENT rechnungsbetrag (betrag, waehrung)>
+<!ELEMENT betrag (#PCDATA)>
+<!ELEMENT waehrung (#PCDATA)>
+<!ELEMENT nettobetrag (betrag, waehrung)>
+<!ELEMENT mehrwertsteuer-gesamt (betrag, waehrung)>
+<!ELEMENT abrechnungs-positionen (abrechnungs-position)*>
+<!ELEMENT abrechnungs-position (menge, einheit, leistung, einzel-preis, gesamt-preis, mehrwertsteuer-prozent, datum?)>
+<!ATTLIST abrechnungs-position positionsnummer CDATA #REQUIRED>
+<!ELEMENT menge (#PCDATA)>
+<!ELEMENT einheit (#PCDATA)>
+<!ELEMENT leistung (#PCDATA)>
+<!ELEMENT einzel-preis (betrag, waehrung)>
+<!ELEMENT gesamt-preis (betrag, waehrung)>
+<!ELEMENT mehrwertsteuer-prozent (#PCDATA)>
+<!ELEMENT datum (#PCDATA)>
