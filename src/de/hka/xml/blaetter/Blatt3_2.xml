@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rechneruebung
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="mein.namespace example.xsd"
+	xmlns="mein.namespace"
+	name="XML"
+>
+	<aufgabe>
+		<student matrikelnummer="60000">
+			<name>Arnold Adams</name>
+			<bestanden />
+		</student>
+		<student matrikelnummer="60001">
+			<name>Anna Albers</name>
+			<bestanden />
+		</student>
+	</aufgabe>
+	<aufgabe>
+		<student matrikelnummer="60000">
+			<name>Arnold Adams</name>
+			<nicht-bestanden />
+		</student>
+	</aufgabe>
+</rechneruebung>

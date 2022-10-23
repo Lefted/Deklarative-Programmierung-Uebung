@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="mein.namespace"
+	elementFormDefault="qualified"
+	xmlns="mein.namespace"
+	>
+	<xs:element name="rechneruebung">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="aufgabe" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="student" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="name" type="xs:normalizedString" />
+										<xs:choice>
+											<xs:element name="bestanden" />
+											<xs:element name="nicht-bestanden" />
+										</xs:choice>
+									</xs:sequence>
+									<xs:attribute name="matrikelnummer" type="xs:normalizedString" use="optional" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+			<xs:attribute name="name" type="xs:normalizedString"
+				use="required" />
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="event-type">
+		<xs:all>
+			<xs:element name="name" type="xs:normalizedString" />
+			<xs:element name="start" type="xs:date" />
+		</xs:all>
+	</xs:complexType>
+</xs:schema>
