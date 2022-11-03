@@ -119,16 +119,25 @@
 		</xs:complexType>
 	</xs:element>
 
-	<xs:element name="zahlungsarten">
+	<xs:element name="zahlungsart">
 		<xs:complexType>
 			<xs:all>
-				<xs:element name="blz" type="xs:positiveInteger" minOccurs="0"/>
-				<xs:element name="name" type="xs:normalizedString" />
-				<xs:element name="bic" type="xs:normalizedString" minOccurs="0"/>
-				<xs:element name="kontonummer" type="xs:normalizedString" minOccurs="0"/>
+				<xs:element name="bank" type="xs:normalizedString" minOccurs="0"/>
+				<xs:element name="name" type="xs:normalizedString" minOccurs="0"/>
 				<xs:element name="iban" type="xs:normalizedString" minOccurs="0"/>
+				<xs:element name="bic" type="xs:normalizedString" minOccurs="0"/>
+				<xs:element name="blz" type="xs:positiveInteger" minOccurs="0"/>
+				<xs:element name="kontonummer" type="xs:normalizedString" minOccurs="0"/>
 				<xs:element name="bitcoin-adresse" type="xs:normalizedString" minOccurs="0"/>
 			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="zahlungsarten">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="zahlungsart" maxOccurs="unbounded"/>
+			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
 

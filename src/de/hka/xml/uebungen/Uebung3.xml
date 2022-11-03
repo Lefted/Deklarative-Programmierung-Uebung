@@ -97,9 +97,12 @@
 			</abrechnungs-position>
 		</abrechnungs-positionen>
 		<zahlungsarten>
-			<blz>66050101</blz>
-			<name>Kleintier Meier</name>
-			<kontonummer>987654321</kontonummer>
+			<zahlungsart>
+				<bank>Sparkasse Karlsruhe</bank>
+				<name>Kleintier Meier</name>
+				<blz>66050101</blz>
+				<kontonummer>987654321</kontonummer>
+			</zahlungsart>
 		</zahlungsarten>
 	</rechnung>
 	<rechnung>
@@ -191,11 +194,11 @@
 			</abrechnungs-position>
 		</abrechnungs-positionen>
 		<zahlungsarten>
-			<name>UBS Zuerich</name>
-			<iban>DE18 6837 003 0999 6663 33</iban>
-			<bic>UBSWCHZH80H</bic>
-			<kontonummer>75847683</kontonummer>
-			<bitcoin-adresse>1P82rBiJHDFSav2QrKx1bvdDRVh5QnGkkZ</bitcoin-adresse>
+			<zahlungsart>
+				<bank>UBS Zuerich</bank>
+				<iban>DE18 6837 003 0999 6663 33</iban>
+				<bic>UBSWCHZH80H</bic>
+			</zahlungsart>
 		</zahlungsarten>
 	</rechnung>
 	<rechnung>
@@ -293,11 +296,17 @@
 			</abrechnungs-position>
 		</abrechnungs-positionen>
 		<zahlungsarten>
-			<iban>DE16660501010077889911</iban>
-			<name>UBS Zuerich</name>
-			<bic>UBSWCHZH80H</bic>
-			<kontonummer>75847683</kontonummer>
-			<bitcoin-adresse>1P82rBiJHDFSav2QrKx1bvdDRVh5QnGkkZ</bitcoin-adresse>
+			<zahlungsart>
+				<iban>DE16660501010077889911</iban>
+			</zahlungsart>
+			<zahlungsart>
+				<bank>UBS Zuerich</bank>
+				<bic>UBSWCHZH80H</bic>
+				<kontonummer>75847683</kontonummer>
+			</zahlungsart>
+			<zahlungsart>
+				<bitcoin-adresse>1P82rBiJHDFSav2QrKx1bvdDRVh5QnGkkZ</bitcoin-adresse>
+			</zahlungsart>
 		</zahlungsarten>
 	</rechnung>
 </rechnungen>
