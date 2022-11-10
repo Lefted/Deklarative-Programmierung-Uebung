@@ -30,7 +30,7 @@
 			<nachname>Sonder-Suttelrau</nachname>
 			<postleitzahl>77070</postleitzahl>
 			<stadt>Siedelsuderstadt</stadt>
-			<strasse>Am Suettelbach</strasse>
+			<strasse>Am S&#x00FC;ttelbach</strasse>
 			<haus-nummer>17</haus-nummer>
 		</leistungs-empfaenger>
 		<ausstellungsdatum>2017-01-15</ausstellungsdatum>
@@ -52,8 +52,8 @@
 		<abrechnungs-positionen>
 			<abrechnungs-position positionsnummer="1">
 				<menge>100</menge>
-				<einheit>Stueck</einheit>
-				<leistung>Antike Holzwuermer</leistung>
+				<einheit>St&#x00FC;ck</einheit>
+				<leistung>Antike Holzw&#x00FC;rmer</leistung>
 				<einzel-preis>
 					<betrag>1.50</betrag>
 					<waehrung>EUR</waehrung>
@@ -67,7 +67,7 @@
 			</abrechnungs-position>
 			<abrechnungs-position positionsnummer="2">
 				<menge>1</menge>
-				<einheit>Stueck</einheit>
+				<einheit>St&#x00FC;ck</einheit>
 				<leistung>Holzwurmfutter</leistung>
 				<einzel-preis>
 					<betrag>34.45</betrag>
@@ -82,7 +82,7 @@
 			</abrechnungs-position>
 			<abrechnungs-position positionsnummer="3">
 				<menge>1</menge>
-				<einheit>Stueck</einheit>
+				<einheit>St&#x00FC;ck</einheit>
 				<leistung>Steinlaus, Petrophaga lorioti</leistung>
 				<einzel-preis>
 					<betrag>777.77</betrag>
@@ -167,7 +167,7 @@
 			<abrechnungs-position positionsnummer="2">
 				<menge>2</menge>
 				<einheit>Liter</einheit>
-				<leistung>Abführmittel Wech damit</leistung>
+				<leistung>Abf&#x00FC;hrmittel Wech damit</leistung>
 				<einzel-preis>
 					<betrag>99.99</betrag>
 					<waehrung>EUR</waehrung>
@@ -180,7 +180,7 @@
 			</abrechnungs-position>
 			<abrechnungs-position positionsnummer="3">
 				<menge>2</menge>
-				<einheit>Stueck</einheit>
+				<einheit>St&#x00FC;ck</einheit>
 				<leistung>Energieriegel Satto</leistung>
 				<einzel-preis>
 					<betrag>5.98</betrag>
@@ -195,7 +195,7 @@
 		</abrechnungs-positionen>
 		<zahlungsarten>
 			<zahlungsart>
-				<bank>Deutsche Bank Loerrach</bank>
+				<bank>Deutsche Bank L&#x00F6;rrach</bank>
 				<iban>DE18 6837 003 0999 6663 33</iban>
 				<bic>UBSWCHZH80H</bic>
 			</zahlungsart>
@@ -244,7 +244,7 @@
 		<abrechnungs-positionen>
 			<abrechnungs-position positionsnummer="1">
 				<menge>1</menge>
-				<einheit>Stueck</einheit>
+				<einheit>St&#x00FC;ck</einheit>
 				<leistung>Urne, Eiche massiv</leistung>
 				<einzel-preis>
 					<betrag>299.99</betrag>
@@ -258,7 +258,7 @@
 			<abrechnungs-position positionsnummer="2">
 				<menge>1</menge>
 				<einheit>Stueck</einheit>
-				<leistung>Ueberfuehrung Krematorium Feuerbach inkl. Begleitpersonal</leistung>
+				<leistung>&#x00DC;berf&#x00FC;hrung Krematorium Feuerbach inkl. Begleitpersonal</leistung>
 				<einzel-preis>
 					<betrag>349.00</betrag>
 					<waehrung>EUR</waehrung>
@@ -270,7 +270,7 @@
 			</abrechnungs-position>
 			<abrechnungs-position positionsnummer="3">
 				<menge>1</menge>
-				<einheit>Stueck</einheit>
+				<einheit>St&#x00FC;ck</einheit>
 				<leistung>Dekoration</leistung>
 				<einzel-preis>
 					<betrag>149.50</betrag>
@@ -283,7 +283,7 @@
 			</abrechnungs-position>
 			<abrechnungs-position positionsnummer="4">
 				<menge>40</menge>
-				<einheit>Stueck</einheit>
+				<einheit>St&#x00FC;ck</einheit>
 				<leistung>Trauerkarten inkl. Briefmarken</leistung>
 				<einzel-preis>
 					<betrag>2.00</betrag>
@@ -297,12 +297,12 @@
 		</abrechnungs-positionen>
 		<zahlungsarten>
 			<zahlungsart>
-				<iban>DE16660501010077889911</iban>
-			</zahlungsart>
-			<zahlungsart>
-				<bank>UBS Zuerich</bank>
+				<bank>UBS Z&#x00FC;rich</bank>
 				<bic>UBSWCHZH80H</bic>
 				<kontonummer>75847683</kontonummer>
+			</zahlungsart>
+			<zahlungsart>
+				<iban>DE16660501010077889911</iban>
 			</zahlungsart>
 			<zahlungsart>
 				<bitcoin-adresse>1P82rBiJHDFSav2QrKx1bvdDRVh5QnGkkZ</bitcoin-adresse>
@@ -312,7 +312,7 @@
 	<rechnung>
 		<unternehmer>
 			<anschrift>
-				<firmen-name>Winhandel von Langres</firmen-name>
+				<firmen-name>Weinhandel von Langres</firmen-name>
 				<postleitzahl>86866</postleitzahl>
 				<stadt>Mickhausen</stadt>
 				<strasse>Emilianigasse 19</strasse>
@@ -321,7 +321,7 @@
 			<umsatzsteuer-identifikationsnummer>DE123456789</umsatzsteuer-identifikationsnummer>
 		</unternehmer>
 		<leistungs-empfaenger>
-			<anrede>Seine Exzellenz der Hochw¨urdigste Herr Erzbischof</anrede>
+			<anrede>Seine Exzellenz der Hochw&#x00FC;rdigste Herr Erzbischof</anrede>
 			<vorname>Waldus</vorname>
 			<nachname>Mikksa</nachname>
 			<postleitzahl>86152</postleitzahl>
@@ -353,7 +353,7 @@
 			</abrechnungs-position>
 			<abrechnungs-position positionsnummer="2">
 				<menge>100</menge>
-				<einheit>Stueck</einheit>
+				<einheit>St&#x00FC;ck</einheit>
 				<leistung>Standardweinglaeser "Schluck"</leistung>
 				<gesamt-preis>
 					<betrag>59.90</betrag>
@@ -363,7 +363,7 @@
 		</abrechnungs-positionen>
 		<zahlungsarten>
 			<zahlungsart>
-				<bank>Pax-Bank Koeln</bank>
+				<bank>Pax-Bank K&#x00F6;ln</bank>
 				<blz>370 601 93</blz>
 				<kontonummer>80200601</kontonummer>
 			</zahlungsart>
