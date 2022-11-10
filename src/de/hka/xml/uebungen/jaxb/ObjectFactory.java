@@ -35,9 +35,6 @@ public class ObjectFactory {
     private final static QName _ChoiceSteuernummerUmsatzsteuerId_QNAME = new QName("uebung3", "choice-steuernummer-umsatzsteuer-id");
     private final static QName _Steuernummer_QNAME = new QName("uebung3", "steuernummer");
     private final static QName _UmsatzsteuerIdentifikationsnummer_QNAME = new QName("uebung3", "umsatzsteuer-identifikationsnummer");
-    private final static QName _ChoiceNettobetragBruttobetrag_QNAME = new QName("uebung3", "choice-nettobetrag-bruttobetrag");
-    private final static QName _Nettobetrag_QNAME = new QName("uebung3", "nettobetrag");
-    private final static QName _Bruttobetrag_QNAME = new QName("uebung3", "bruttobetrag");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: de.hka.xml.uebungen.jaxb
@@ -107,16 +104,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RechnungsbetragType }
-     * 
-     * @return
-     *     the new instance of {@link RechnungsbetragType }
-     */
-    public RechnungsbetragType createRechnungsbetragType() {
-        return new RechnungsbetragType();
-    }
-
-    /**
      * Create an instance of {@link Entgelt }
      * 
      * @return
@@ -124,6 +111,16 @@ public class ObjectFactory {
      */
     public Entgelt createEntgelt() {
         return new Entgelt();
+    }
+
+    /**
+     * Create an instance of {@link RechnungsbetragType }
+     * 
+     * @return
+     *     the new instance of {@link RechnungsbetragType }
+     */
+    public RechnungsbetragType createRechnungsbetragType() {
+        return new RechnungsbetragType();
     }
 
     /**
@@ -215,45 +212,6 @@ public class ObjectFactory {
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     public JAXBElement<String> createUmsatzsteuerIdentifikationsnummer(String value) {
         return new JAXBElement<>(_UmsatzsteuerIdentifikationsnummer_QNAME, String.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RechnungsbetragType }{@code >}
-     * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link RechnungsbetragType }{@code >}
-     */
-    @XmlElementDecl(namespace = "uebung3", name = "choice-nettobetrag-bruttobetrag")
-    public JAXBElement<RechnungsbetragType> createChoiceNettobetragBruttobetrag(RechnungsbetragType value) {
-        return new JAXBElement<>(_ChoiceNettobetragBruttobetrag_QNAME, RechnungsbetragType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RechnungsbetragType }{@code >}
-     * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link RechnungsbetragType }{@code >}
-     */
-    @XmlElementDecl(namespace = "uebung3", name = "nettobetrag", substitutionHeadNamespace = "uebung3", substitutionHeadName = "choice-nettobetrag-bruttobetrag")
-    public JAXBElement<RechnungsbetragType> createNettobetrag(RechnungsbetragType value) {
-        return new JAXBElement<>(_Nettobetrag_QNAME, RechnungsbetragType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RechnungsbetragType }{@code >}
-     * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link RechnungsbetragType }{@code >}
-     */
-    @XmlElementDecl(namespace = "uebung3", name = "bruttobetrag", substitutionHeadNamespace = "uebung3", substitutionHeadName = "choice-nettobetrag-bruttobetrag")
-    public JAXBElement<RechnungsbetragType> createBruttobetrag(RechnungsbetragType value) {
-        return new JAXBElement<>(_Bruttobetrag_QNAME, RechnungsbetragType.class, null, value);
     }
 
 }

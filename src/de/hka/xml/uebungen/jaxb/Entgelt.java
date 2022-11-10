@@ -7,11 +7,9 @@
 
 package de.hka.xml.uebungen.jaxb;
 
-import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlElementRef;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -27,7 +25,8 @@ import jakarta.xml.bind.annotation.XmlType;
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
  *         <element name="rechnungsbetrag" type="{uebung3}rechnungsbetrag-type"/>
- *         <element ref="{uebung3}choice-nettobetrag-bruttobetrag"/>
+ *         <element name="nettobetrag" type="{uebung3}rechnungsbetrag-type" minOccurs="0"/>
+ *         <element name="bruttobetrag" type="{uebung3}rechnungsbetrag-type" minOccurs="0"/>
  *         <element name="mehrwertsteuer-gesamt" type="{uebung3}rechnungsbetrag-type"/>
  *       </sequence>
  *     </restriction>
@@ -40,7 +39,8 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "rechnungsbetrag",
-    "choiceNettobetragBruttobetrag",
+    "nettobetrag",
+    "bruttobetrag",
     "mehrwertsteuerGesamt"
 })
 @XmlRootElement(name = "entgelt")
@@ -48,8 +48,8 @@ public class Entgelt {
 
     @XmlElement(required = true)
     protected RechnungsbetragType rechnungsbetrag;
-    @XmlElementRef(name = "choice-nettobetrag-bruttobetrag", namespace = "uebung3", type = JAXBElement.class)
-    protected JAXBElement<RechnungsbetragType> choiceNettobetragBruttobetrag;
+    protected RechnungsbetragType nettobetrag;
+    protected RechnungsbetragType bruttobetrag;
     @XmlElement(name = "mehrwertsteuer-gesamt", required = true)
     protected RechnungsbetragType mehrwertsteuerGesamt;
 
@@ -78,31 +78,51 @@ public class Entgelt {
     }
 
     /**
-     * Ruft den Wert der choiceNettobetragBruttobetrag-Eigenschaft ab.
+     * Ruft den Wert der nettobetrag-Eigenschaft ab.
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link RechnungsbetragType }{@code >}
-     *     {@link JAXBElement }{@code <}{@link RechnungsbetragType }{@code >}
-     *     {@link JAXBElement }{@code <}{@link RechnungsbetragType }{@code >}
+     *     {@link RechnungsbetragType }
      *     
      */
-    public JAXBElement<RechnungsbetragType> getChoiceNettobetragBruttobetrag() {
-        return choiceNettobetragBruttobetrag;
+    public RechnungsbetragType getNettobetrag() {
+        return nettobetrag;
     }
 
     /**
-     * Legt den Wert der choiceNettobetragBruttobetrag-Eigenschaft fest.
+     * Legt den Wert der nettobetrag-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link RechnungsbetragType }{@code >}
-     *     {@link JAXBElement }{@code <}{@link RechnungsbetragType }{@code >}
-     *     {@link JAXBElement }{@code <}{@link RechnungsbetragType }{@code >}
+     *     {@link RechnungsbetragType }
      *     
      */
-    public void setChoiceNettobetragBruttobetrag(JAXBElement<RechnungsbetragType> value) {
-        this.choiceNettobetragBruttobetrag = value;
+    public void setNettobetrag(RechnungsbetragType value) {
+        this.nettobetrag = value;
+    }
+
+    /**
+     * Ruft den Wert der bruttobetrag-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link RechnungsbetragType }
+     *     
+     */
+    public RechnungsbetragType getBruttobetrag() {
+        return bruttobetrag;
+    }
+
+    /**
+     * Legt den Wert der bruttobetrag-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link RechnungsbetragType }
+     *     
+     */
+    public void setBruttobetrag(RechnungsbetragType value) {
+        this.bruttobetrag = value;
     }
 
     /**

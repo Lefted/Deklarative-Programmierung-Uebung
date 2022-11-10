@@ -33,7 +33,7 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         <element name="menge" type="{http://www.w3.org/2001/XMLSchema}positiveInteger"/>
  *         <element name="einheit" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
  *         <element name="leistung" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         <element name="einzel-preis" type="{uebung3}rechnungsbetrag-type"/>
+ *         <element name="einzel-preis" type="{uebung3}rechnungsbetrag-type" minOccurs="0"/>
  *         <element name="gesamt-preis" type="{uebung3}rechnungsbetrag-type"/>
  *         <element name="mehrwertsteuer-prozent" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" minOccurs="0"/>
  *         <element name="datum" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
@@ -68,7 +68,7 @@ public class AbrechnungsPosition {
     protected String einheit;
     @XmlElement(required = true)
     protected String leistung;
-    @XmlElement(name = "einzel-preis", required = true)
+    @XmlElement(name = "einzel-preis")
     protected RechnungsbetragType einzelPreis;
     @XmlElement(name = "gesamt-preis", required = true)
     protected RechnungsbetragType gesamtPreis;

@@ -7,7 +7,6 @@
 
 package de.hka.xml.uebungen.jaxb;
 
-import java.math.BigInteger;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -32,7 +31,7 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         <element name="name" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         <element name="iban" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         <element name="bic" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         <element name="blz" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" minOccurs="0"/>
+ *         <element name="blz" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         <element name="kontonummer" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         <element name="bitcoin-adresse" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *       </all>
@@ -62,8 +61,9 @@ public class Zahlungsart {
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String bic;
-    @XmlSchemaType(name = "positiveInteger")
-    protected BigInteger blz;
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    @XmlSchemaType(name = "normalizedString")
+    protected String blz;
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String kontonummer;
@@ -173,10 +173,10 @@ public class Zahlungsart {
      * 
      * @return
      *     possible object is
-     *     {@link BigInteger }
+     *     {@link String }
      *     
      */
-    public BigInteger getBlz() {
+    public String getBlz() {
         return blz;
     }
 
@@ -185,10 +185,10 @@ public class Zahlungsart {
      * 
      * @param value
      *     allowed object is
-     *     {@link BigInteger }
+     *     {@link String }
      *     
      */
-    public void setBlz(BigInteger value) {
+    public void setBlz(String value) {
         this.blz = value;
     }
 

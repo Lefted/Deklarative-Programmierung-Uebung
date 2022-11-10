@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="anrede" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         <element name="anrede" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         <element name="vorname" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         <element name="nachname" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
  *         <element name="postleitzahl" type="{http://www.w3.org/2001/XMLSchema}positiveInteger"/>
@@ -56,7 +56,6 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlRootElement(name = "leistungs-empfaenger")
 public class LeistungsEmpfaenger {
 
-    @XmlElement(required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String anrede;

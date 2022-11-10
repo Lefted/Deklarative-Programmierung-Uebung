@@ -40,7 +40,7 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *                   <element name="stadt" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
  *                   <element name="strasse" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
  *                   <element name="haus-nummer" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
- *                   <element ref="{uebung3}telefon"/>
+ *                   <element ref="{uebung3}telefon" minOccurs="0"/>
  *                   <element ref="{uebung3}fax" minOccurs="0"/>
  *                   <element name="e-mail" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *                 </sequence>
@@ -138,7 +138,7 @@ public class Unternehmer {
      *         <element name="stadt" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
      *         <element name="strasse" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
      *         <element name="haus-nummer" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
-     *         <element ref="{uebung3}telefon"/>
+     *         <element ref="{uebung3}telefon" minOccurs="0"/>
      *         <element ref="{uebung3}fax" minOccurs="0"/>
      *         <element name="e-mail" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
      *       </sequence>
@@ -181,7 +181,6 @@ public class Unternehmer {
         @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
         @XmlSchemaType(name = "normalizedString")
         protected String hausNummer;
-        @XmlElement(required = true)
         protected Telefon telefon;
         protected Fax fax;
         @XmlElement(name = "e-mail")
