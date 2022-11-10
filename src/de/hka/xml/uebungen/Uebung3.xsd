@@ -59,7 +59,7 @@
 	<xs:element name="leistungs-empfaenger">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="anrede" type="xs:normalizedString" minOccurs="0"/>
+				<xs:element name="anrede" type="xs:normalizedString" />
 				<xs:element name="vorname" type="xs:normalizedString" minOccurs="0"/>
 				<xs:element name="nachname" type="xs:normalizedString" />
 				<xs:element name="postleitzahl" type="xs:positiveInteger" />
@@ -80,9 +80,8 @@
 	<xs:element name="entgelt">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="rechnungsbetrag" type="rechnungsbetrag-type" />
+				<xs:element name="bruttobetrag" type="rechnungsbetrag-type" />
 				<xs:element name="nettobetrag" type="rechnungsbetrag-type" minOccurs="0"/>
-				<xs:element name="bruttobetrag" type="rechnungsbetrag-type" minOccurs="0"/>
 				<xs:element name="mehrwertsteuer-gesamt" type="rechnungsbetrag-type" />
 			</xs:sequence>
 		</xs:complexType>

@@ -36,10 +36,10 @@
 		<ausstellungsdatum>2017-01-15</ausstellungsdatum>
 		<rechnungsnummer>657321</rechnungsnummer>
 		<entgelt>
-			<rechnungsbetrag>
+			<bruttobetrag>
 				<betrag>962.22</betrag>
 				<waehrung>EUR</waehrung>
-			</rechnungsbetrag>
+			</bruttobetrag>
 			<nettobetrag>
 				<betrag>808.59</betrag>
 				<waehrung>EUR</waehrung>
@@ -136,10 +136,10 @@
 		<ausstellungsdatum>2017-08-08</ausstellungsdatum>
 		<rechnungsnummer>98-798-7987</rechnungsnummer>
 		<entgelt>
-			<rechnungsbetrag>
+			<bruttobetrag>
 				<betrag>621.94</betrag>
 				<waehrung>EUR</waehrung>
-			</rechnungsbetrag>
+			</bruttobetrag>
 			<nettobetrag>
 				<betrag>490.22</betrag>
 				<waehrung>EUR</waehrung>
@@ -195,7 +195,7 @@
 		</abrechnungs-positionen>
 		<zahlungsarten>
 			<zahlungsart>
-				<bank>UBS Zuerich</bank>
+				<bank>Deutsche Bank Loerrach</bank>
 				<iban>DE18 6837 003 0999 6663 33</iban>
 				<bic>UBSWCHZH80H</bic>
 			</zahlungsart>
@@ -228,14 +228,14 @@
 		<ausstellungsdatum>2017-10-19</ausstellungsdatum>
 		<rechnungsnummer>893 213 11</rechnungsnummer>
 		<entgelt>
-			<rechnungsbetrag>
+			<bruttobetrag>
 				<betrag>878.49</betrag>
 				<waehrung>EUR</waehrung>
-			</rechnungsbetrag>
-			<bruttobetrag>
+			</bruttobetrag>
+			<nettobetrag>
 				<betrag>738.23</betrag>
 				<waehrung>EUR</waehrung>
-			</bruttobetrag>
+			</nettobetrag>
 			<mehrwertsteuer-gesamt>
 				<betrag>140.26</betrag>
 				<waehrung>EUR</waehrung>
@@ -332,10 +332,10 @@
 		<ausstellungsdatum>2009-11-07</ausstellungsdatum>
 		<rechnungsnummer>611-555-32</rechnungsnummer>
 		<entgelt>
-			<rechnungsbetrag>
+			<bruttobetrag>
 				<betrag>2359.88</betrag>
 				<waehrung>EUR</waehrung>
-			</rechnungsbetrag>
+			</bruttobetrag>
 			<mehrwertsteuer-gesamt>
 				<betrag>376.79</betrag>
 				<waehrung>EUR</waehrung>
