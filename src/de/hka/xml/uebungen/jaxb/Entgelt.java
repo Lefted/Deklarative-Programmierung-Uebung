@@ -24,9 +24,8 @@ import jakarta.xml.bind.annotation.XmlType;
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="rechnungsbetrag" type="{uebung3}rechnungsbetrag-type"/>
+ *         <element name="bruttobetrag" type="{uebung3}rechnungsbetrag-type"/>
  *         <element name="nettobetrag" type="{uebung3}rechnungsbetrag-type" minOccurs="0"/>
- *         <element name="bruttobetrag" type="{uebung3}rechnungsbetrag-type" minOccurs="0"/>
  *         <element name="mehrwertsteuer-gesamt" type="{uebung3}rechnungsbetrag-type"/>
  *       </sequence>
  *     </restriction>
@@ -38,43 +37,41 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "rechnungsbetrag",
-    "nettobetrag",
     "bruttobetrag",
+    "nettobetrag",
     "mehrwertsteuerGesamt"
 })
 @XmlRootElement(name = "entgelt")
 public class Entgelt {
 
     @XmlElement(required = true)
-    protected RechnungsbetragType rechnungsbetrag;
-    protected RechnungsbetragType nettobetrag;
     protected RechnungsbetragType bruttobetrag;
+    protected RechnungsbetragType nettobetrag;
     @XmlElement(name = "mehrwertsteuer-gesamt", required = true)
     protected RechnungsbetragType mehrwertsteuerGesamt;
 
     /**
-     * Ruft den Wert der rechnungsbetrag-Eigenschaft ab.
+     * Ruft den Wert der bruttobetrag-Eigenschaft ab.
      * 
      * @return
      *     possible object is
      *     {@link RechnungsbetragType }
      *     
      */
-    public RechnungsbetragType getRechnungsbetrag() {
-        return rechnungsbetrag;
+    public RechnungsbetragType getBruttobetrag() {
+        return bruttobetrag;
     }
 
     /**
-     * Legt den Wert der rechnungsbetrag-Eigenschaft fest.
+     * Legt den Wert der bruttobetrag-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
      *     {@link RechnungsbetragType }
      *     
      */
-    public void setRechnungsbetrag(RechnungsbetragType value) {
-        this.rechnungsbetrag = value;
+    public void setBruttobetrag(RechnungsbetragType value) {
+        this.bruttobetrag = value;
     }
 
     /**
@@ -99,30 +96,6 @@ public class Entgelt {
      */
     public void setNettobetrag(RechnungsbetragType value) {
         this.nettobetrag = value;
-    }
-
-    /**
-     * Ruft den Wert der bruttobetrag-Eigenschaft ab.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RechnungsbetragType }
-     *     
-     */
-    public RechnungsbetragType getBruttobetrag() {
-        return bruttobetrag;
-    }
-
-    /**
-     * Legt den Wert der bruttobetrag-Eigenschaft fest.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RechnungsbetragType }
-     *     
-     */
-    public void setBruttobetrag(RechnungsbetragType value) {
-        this.bruttobetrag = value;
     }
 
     /**
