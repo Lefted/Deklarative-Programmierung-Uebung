@@ -45,7 +45,7 @@
 							<xs:element name="stadt" type="xs:normalizedString" />
 							<xs:element name="strasse" type="xs:normalizedString" />
 							<xs:element name="haus-nummer" type="xs:normalizedString" />
-							<xs:element ref="telefon" />
+							<xs:element ref="telefon" minOccurs="0"/>
 							<xs:element ref="fax" minOccurs="0"/>
 							<xs:element name="e-mail" type="xs:normalizedString" minOccurs="0"/>
 						</xs:sequence>
@@ -59,7 +59,7 @@
 	<xs:element name="leistungs-empfaenger">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="anrede" type="xs:normalizedString" />
+				<xs:element name="anrede" type="xs:normalizedString" minOccurs="0"/>
 				<xs:element name="vorname" type="xs:normalizedString" minOccurs="0"/>
 				<xs:element name="nachname" type="xs:normalizedString" />
 				<xs:element name="postleitzahl" type="xs:positiveInteger" />
@@ -77,20 +77,12 @@
 		</xs:sequence>
 	</xs:complexType>
 
-	<!-- um entweder netto- oder bruttobetrag im entgelt zu haben, wird hier 
-		substituiert -->
-	<xs:element name="choice-nettobetrag-bruttobetrag"
-		abstract="true" type="rechnungsbetrag-type" />
-	<xs:element name="nettobetrag"
-		substitutionGroup="choice-nettobetrag-bruttobetrag" />
-	<xs:element name="bruttobetrag"
-		substitutionGroup="choice-nettobetrag-bruttobetrag" />
-
 	<xs:element name="entgelt">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="rechnungsbetrag" type="rechnungsbetrag-type" />
-				<xs:element ref="choice-nettobetrag-bruttobetrag" />
+				<xs:element name="nettobetrag" type="rechnungsbetrag-type" minOccurs="0"/>
+				<xs:element name="bruttobetrag" type="rechnungsbetrag-type" minOccurs="0"/>
 				<xs:element name="mehrwertsteuer-gesamt" type="rechnungsbetrag-type" />
 			</xs:sequence>
 		</xs:complexType>
@@ -102,7 +94,7 @@
 				<xs:element name="menge" type="xs:positiveInteger" />
 				<xs:element name="einheit" type="xs:normalizedString" />
 				<xs:element name="leistung" type="xs:string" />
-				<xs:element name="einzel-preis" type="rechnungsbetrag-type" />
+				<xs:element name="einzel-preis" type="rechnungsbetrag-type" minOccurs="0"/>
 				<xs:element name="gesamt-preis" type="rechnungsbetrag-type" />
 				<xs:element name="mehrwertsteuer-prozent" type="xs:positiveInteger" minOccurs="0"/>
 				<xs:element name="datum" type="xs:date" minOccurs="0"/>
@@ -126,7 +118,7 @@
 				<xs:element name="name" type="xs:normalizedString" minOccurs="0"/>
 				<xs:element name="iban" type="xs:normalizedString" minOccurs="0"/>
 				<xs:element name="bic" type="xs:normalizedString" minOccurs="0"/>
-				<xs:element name="blz" type="xs:positiveInteger" minOccurs="0"/>
+				<xs:element name="blz" type="xs:normalizedString" minOccurs="0"/>
 				<xs:element name="kontonummer" type="xs:normalizedString" minOccurs="0"/>
 				<xs:element name="bitcoin-adresse" type="xs:normalizedString" minOccurs="0"/>
 			</xs:all>

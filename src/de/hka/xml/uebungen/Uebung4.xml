@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rechnungen
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="uebung3 Uebung3.xsd"
+	xmlns="uebung3"
+	name="XML">
+	<rechnung>
+		<unternehmer>
+			<anschrift>
+				<firmen-name>Kleintier Meier GmbH</firmen-name>
+				<postleitzahl>81828</postleitzahl>
+				<stadt>Machthausen</stadt>
+				<strasse>Meierring</strasse>
+				<haus-nummer>3</haus-nummer>
+				<telefon>
+					<vorwahl>0777</vorwahl>
+					<nummer>987987</nummer>
+				</telefon>
+				<fax>
+					<vorwahl>0777</vorwahl>
+					<nummer>987789</nummer>
+				</fax>
+				<e-mail>klein.meier@tiere.de</e-mail>
+			</anschrift>
+			<steuernummer>88 123/8282 2</steuernummer>
+		</unternehmer>
+		<leistungs-empfaenger>
+			<anrede>Frau</anrede>
+			<vorname>Sybille</vorname>
+			<nachname>Sonder-Suttelrau</nachname>
+			<postleitzahl>77070</postleitzahl>
+			<stadt>Siedelsuderstadt</stadt>
+			<strasse>Am Suettelbach</strasse>
+			<haus-nummer>17</haus-nummer>
+		</leistungs-empfaenger>
+		<ausstellungsdatum>2017-01-15</ausstellungsdatum>
+		<rechnungsnummer>657321</rechnungsnummer>
+		<entgelt>
+			<rechnungsbetrag>
+				<betrag>962.22</betrag>
+				<waehrung>EUR</waehrung>
+			</rechnungsbetrag>
+			<nettobetrag>
+				<betrag>808.59</betrag>
+				<waehrung>EUR</waehrung>
+			</nettobetrag>
+			<mehrwertsteuer-gesamt>
+				<betrag>153.63</betrag>
+				<waehrung>EUR</waehrung>
+			</mehrwertsteuer-gesamt>
+		</entgelt>
+		<abrechnungs-positionen>
+			<abrechnungs-position positionsnummer="1">
+				<menge>100</menge>
+				<einheit>Stueck</einheit>
+				<leistung>Antike Holzwuermer</leistung>
+				<einzel-preis>
+					<betrag>1.50</betrag>
+					<waehrung>EUR</waehrung>
+				</einzel-preis>
+				<gesamt-preis>
+					<betrag>150.00</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+				<mehrwertsteuer-prozent>19</mehrwertsteuer-prozent>
+				<datum>2017-01-01</datum>
+			</abrechnungs-position>
+			<abrechnungs-position positionsnummer="2">
+				<menge>1</menge>
+				<einheit>Stueck</einheit>
+				<leistung>Holzwurmfutter</leistung>
+				<einzel-preis>
+					<betrag>34.45</betrag>
+					<waehrung>EUR</waehrung>
+				</einzel-preis>
+				<gesamt-preis>
+					<betrag>34.45</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+				<mehrwertsteuer-prozent>19</mehrwertsteuer-prozent>
+				<datum>2017-01-12</datum>
+			</abrechnungs-position>
+			<abrechnungs-position positionsnummer="3">
+				<menge>1</menge>
+				<einheit>Stueck</einheit>
+				<leistung>Steinlaus, Petrophaga lorioti</leistung>
+				<einzel-preis>
+					<betrag>777.77</betrag>
+					<waehrung>EUR</waehrung>
+				</einzel-preis>
+				<gesamt-preis>
+					<betrag>777.77</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+				<mehrwertsteuer-prozent>19</mehrwertsteuer-prozent>
+				<datum>2017-01-12</datum>
+			</abrechnungs-position>
+		</abrechnungs-positionen>
+		<zahlungsarten>
+			<zahlungsart>
+				<bank>Sparkasse Karlsruhe</bank>
+				<name>Kleintier Meier</name>
+				<blz>66050101</blz>
+				<kontonummer>987654321</kontonummer>
+			</zahlungsart>
+		</zahlungsarten>
+	</rechnung>
+	<rechnung>
+		<unternehmer>
+			<anschrift>
+				<firmen-name>Rochade-La Hoff AG</firmen-name>
+				<postleitzahl>79639</postleitzahl>
+				<stadt>Grenzych-Wahlen</stadt>
+				<strasse>An der Chemie</strasse>
+				<haus-nummer>17</haus-nummer>
+				<telefon>
+					<vorwahl>07624</vorwahl>
+					<nummer>666 333 999</nummer>
+				</telefon>
+				<fax>
+					<vorwahl>07624</vorwahl>
+					<nummer>666 333 990</nummer>
+				</fax>
+			</anschrift>
+			<umsatzsteuer-identifikationsnummer>DE333666999</umsatzsteuer-identifikationsnummer>
+		</unternehmer>
+		<leistungs-empfaenger>
+			<anrede>Dr. med.</anrede>
+			<vorname>Cyprian</vorname>
+			<nachname>Zottel</nachname>
+			<postleitzahl>13023</postleitzahl>
+			<stadt>Zotenheim</stadt>
+			<strasse>Soddelstrudel</strasse>
+			<haus-nummer>5a</haus-nummer>
+		</leistungs-empfaenger>
+		<ausstellungsdatum>2017-08-08</ausstellungsdatum>
+		<rechnungsnummer>98-798-7987</rechnungsnummer>
+		<entgelt>
+			<rechnungsbetrag>
+				<betrag>621.94</betrag>
+				<waehrung>EUR</waehrung>
+			</rechnungsbetrag>
+			<nettobetrag>
+				<betrag>490.22</betrag>
+				<waehrung>EUR</waehrung>
+			</nettobetrag>
+			<mehrwertsteuer-gesamt>
+				<betrag>116.74</betrag>
+				<waehrung>EUR</waehrung>
+			</mehrwertsteuer-gesamt>
+		</entgelt>
+		<abrechnungs-positionen>
+			<abrechnungs-position positionsnummer="1">
+				<menge>3</menge>
+				<einheit>Packungen</einheit>
+				<leistung>Grippemittel Tumifla</leistung>
+				<einzel-preis>
+					<betrag>120.00</betrag>
+					<waehrung>EUR</waehrung>
+				</einzel-preis>
+				<gesamt-preis>
+					<betrag>360.00</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+				<mehrwertsteuer-prozent>19</mehrwertsteuer-prozent>
+			</abrechnungs-position>
+			<abrechnungs-position positionsnummer="2">
+				<menge>2</menge>
+				<einheit>Liter</einheit>
+				<leistung>Abführmittel Wech damit</leistung>
+				<einzel-preis>
+					<betrag>99.99</betrag>
+					<waehrung>EUR</waehrung>
+				</einzel-preis>
+				<gesamt-preis>
+					<betrag>199.98</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+				<mehrwertsteuer-prozent>19</mehrwertsteuer-prozent>
+			</abrechnungs-position>
+			<abrechnungs-position positionsnummer="3">
+				<menge>2</menge>
+				<einheit>Stueck</einheit>
+				<leistung>Energieriegel Satto</leistung>
+				<einzel-preis>
+					<betrag>5.98</betrag>
+					<waehrung>EUR</waehrung>
+				</einzel-preis>
+				<gesamt-preis>
+					<betrag>11.96</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+				<mehrwertsteuer-prozent>7</mehrwertsteuer-prozent>
+			</abrechnungs-position>
+		</abrechnungs-positionen>
+		<zahlungsarten>
+			<zahlungsart>
+				<bank>UBS Zuerich</bank>
+				<iban>DE18 6837 003 0999 6663 33</iban>
+				<bic>UBSWCHZH80H</bic>
+			</zahlungsart>
+		</zahlungsarten>
+	</rechnung>
+	<rechnung>
+		<unternehmer>
+			<anschrift>
+				<firmen-name>Bestattungen Unterberg</firmen-name>
+				<postleitzahl>43210</postleitzahl>
+				<stadt>Ultursingen</stadt>
+				<strasse>Oberbergweg</strasse>
+				<haus-nummer>5</haus-nummer>
+				<telefon>
+					<vorwahl>0478</vorwahl>
+					<nummer>777 555</nummer>
+				</telefon>
+				<e-mail>unter@berg.de</e-mail>
+			</anschrift>
+			<umsatzsteuer-identifikationsnummer>DE 987654321</umsatzsteuer-identifikationsnummer>
+		</unternehmer>
+		<leistungs-empfaenger>
+			<anrede>Familie</anrede>
+			<nachname>Urmel</nachname>
+			<postleitzahl>43210</postleitzahl>
+			<stadt>Ultursingen</stadt>
+			<strasse>Ulturenstrasse</strasse>
+			<haus-nummer>764</haus-nummer>
+		</leistungs-empfaenger>
+		<ausstellungsdatum>2017-10-19</ausstellungsdatum>
+		<rechnungsnummer>893 213 11</rechnungsnummer>
+		<entgelt>
+			<rechnungsbetrag>
+				<betrag>878.49</betrag>
+				<waehrung>EUR</waehrung>
+			</rechnungsbetrag>
+			<bruttobetrag>
+				<betrag>738.23</betrag>
+				<waehrung>EUR</waehrung>
+			</bruttobetrag>
+			<mehrwertsteuer-gesamt>
+				<betrag>140.26</betrag>
+				<waehrung>EUR</waehrung>
+			</mehrwertsteuer-gesamt>
+		</entgelt>
+		<abrechnungs-positionen>
+			<abrechnungs-position positionsnummer="1">
+				<menge>1</menge>
+				<einheit>Stueck</einheit>
+				<leistung>Urne, Eiche massiv</leistung>
+				<einzel-preis>
+					<betrag>299.99</betrag>
+					<waehrung>EUR</waehrung>
+				</einzel-preis>
+				<gesamt-preis>
+					<betrag>299.99</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+			</abrechnungs-position>
+			<abrechnungs-position positionsnummer="2">
+				<menge>1</menge>
+				<einheit>Stueck</einheit>
+				<leistung>Ueberfuehrung Krematorium Feuerbach inkl. Begleitpersonal</leistung>
+				<einzel-preis>
+					<betrag>349.00</betrag>
+					<waehrung>EUR</waehrung>
+				</einzel-preis>
+				<gesamt-preis>
+					<betrag>349.00</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+			</abrechnungs-position>
+			<abrechnungs-position positionsnummer="3">
+				<menge>1</menge>
+				<einheit>Stueck</einheit>
+				<leistung>Dekoration</leistung>
+				<einzel-preis>
+					<betrag>149.50</betrag>
+					<waehrung>EUR</waehrung>
+				</einzel-preis>
+				<gesamt-preis>
+					<betrag>149.50</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+			</abrechnungs-position>
+			<abrechnungs-position positionsnummer="4">
+				<menge>40</menge>
+				<einheit>Stueck</einheit>
+				<leistung>Trauerkarten inkl. Briefmarken</leistung>
+				<einzel-preis>
+					<betrag>2.00</betrag>
+					<waehrung>EUR</waehrung>
+				</einzel-preis>
+				<gesamt-preis>
+					<betrag>80.00</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+			</abrechnungs-position>
+		</abrechnungs-positionen>
+		<zahlungsarten>
+			<zahlungsart>
+				<iban>DE16660501010077889911</iban>
+			</zahlungsart>
+			<zahlungsart>
+				<bank>UBS Zuerich</bank>
+				<bic>UBSWCHZH80H</bic>
+				<kontonummer>75847683</kontonummer>
+			</zahlungsart>
+			<zahlungsart>
+				<bitcoin-adresse>1P82rBiJHDFSav2QrKx1bvdDRVh5QnGkkZ</bitcoin-adresse>
+			</zahlungsart>
+		</zahlungsarten>
+	</rechnung>
+	<rechnung>
+		<unternehmer>
+			<anschrift>
+				<firmen-name>Winhandel von Langres</firmen-name>
+				<postleitzahl>86866</postleitzahl>
+				<stadt>Mickhausen</stadt>
+				<strasse>Emilianigasse 19</strasse>
+				<haus-nummer>19</haus-nummer>
+			</anschrift>
+			<umsatzsteuer-identifikationsnummer>DE123456789</umsatzsteuer-identifikationsnummer>
+		</unternehmer>
+		<leistungs-empfaenger>
+			<anrede>Seine Exzellenz der Hochw¨urdigste Herr Erzbischof</anrede>
+			<vorname>Waldus</vorname>
+			<nachname>Mikksa</nachname>
+			<postleitzahl>86152</postleitzahl>
+			<stadt>Augsburg</stadt>
+			<strasse>Fronhof</strasse>
+			<haus-nummer>4</haus-nummer>
+		</leistungs-empfaenger>
+		<ausstellungsdatum>2009-11-07</ausstellungsdatum>
+		<rechnungsnummer>611-555-32</rechnungsnummer>
+		<entgelt>
+			<rechnungsbetrag>
+				<betrag>2359.88</betrag>
+				<waehrung>EUR</waehrung>
+			</rechnungsbetrag>
+			<mehrwertsteuer-gesamt>
+				<betrag>376.79</betrag>
+				<waehrung>EUR</waehrung>
+			</mehrwertsteuer-gesamt>
+		</entgelt>
+		<abrechnungs-positionen>
+			<abrechnungs-position positionsnummer="1">
+				<menge>1</menge>
+				<einheit>Fass</einheit>
+				<leistung>"Liebliche Gottesmilbe"</leistung>
+				<gesamt-preis>
+					<betrag>2299.98</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+			</abrechnungs-position>
+			<abrechnungs-position positionsnummer="2">
+				<menge>100</menge>
+				<einheit>Stueck</einheit>
+				<leistung>Standardweinglaeser "Schluck"</leistung>
+				<gesamt-preis>
+					<betrag>59.90</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+			</abrechnungs-position>
+		</abrechnungs-positionen>
+		<zahlungsarten>
+			<zahlungsart>
+				<bank>Pax-Bank Koeln</bank>
+				<blz>370 601 93</blz>
+				<kontonummer>80200601</kontonummer>
+			</zahlungsart>
+		</zahlungsarten>
+	</rechnung>
+</rechnungen>
