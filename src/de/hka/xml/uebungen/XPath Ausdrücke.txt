@@ -1,0 +1,33 @@
+1. Die erste Zahlungsart der dritten Rechnung
+/rechnungen/rechnung[3]/zahlungsarten/zahlungsart[1]
+
+2. Der Namenstext aus allen Adressen, die eine Telefonnummer enthalten.
+/rechnungen/rechnung/unternehmer/anschrift/firmen-name[boolean(../telefon)]
+
+3. Die Adresse jedes Leistungserbringers, die eine Postleitzahl beginnend mit der Ziffer
+7 besitzt
+/rechnungen/rechnung/unternehmer/anschrift[starts-with(./postleitzahl, "7")]
+
+4. Jede Rechnungsposition, die einen Einzelpreis besitzt, der kleiner als 100.00 Euro ist.
+/rechnungen/rechnung/abrechnungs-positionen/abrechnungs-position[number(./einzel-preis/betrag) < 100.00]
+
+5. Die Rechnungsnummer jeder Rechnung mit mehr als 3 Positionen.
+/rechnungen/rechnung/rechnungsnummer[count(../abrechnungs-positionen/abrechnungs-position) > 3]
+
+6. Jede Rechnung, bei der die Summe der Gesamtpreise der Positionen ungleich dem
+Rechnungsbruttobetrag ist.
+/rechnungen/rechnung[sum(./abrechnungs-positionen/abrechnungs-position/gesamt-preis/betrag)  != number(./entgelt/bruttobetrag/betrag)]
+
+7. Jede Rechnung, die in der Anrede der Empfängeradresse den Text Herr oder Frau
+enthält.
+/rechnungen/rechnung[contains(./leistungs-empfaenger/anrede, "Frau") or contains(./leistungs-empfaenger/anrede, "Herr")]
+
+8. Jede Rechnung mit einem Brutto-Gesamtbetrag uber 1000.00. ¨
+/rechnungen/rechnung[number(./entgelt/bruttobetrag/betrag) > 1000]
+
+9. Jede Rechnung mit einem Brutto-Gesamtbetrag uber dem durchschnittlichen Brutto- ¨
+Gesamtbetrag aller Rechnungen.
+/rechnungen/rechnung[(number(./entgelt/bruttobetrag/betrag))  >  ( (sum(/rechnungen/rechnung/entgelt/bruttobetrag/betrag)) div  (count(/rechnungen/rechnung)) )]
+
+
+https://stackoverflow.com/questions/59241569/xpath-division-operator
