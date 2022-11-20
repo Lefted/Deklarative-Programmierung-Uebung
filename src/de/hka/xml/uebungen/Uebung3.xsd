@@ -22,16 +22,6 @@
 		</xs:complexType>
 	</xs:element>
 
-	<!-- um sequence und all im Folgenden komibieren zu können, wird substituiert -->
-	<xs:element name="choice-steuernummer-umsatzsteuer-id"
-		abstract="true" />
-	<xs:element name="steuernummer"
-		substitutionGroup="choice-steuernummer-umsatzsteuer-id"
-		type="xs:normalizedString" />
-	<xs:element name="umsatzsteuer-identifikationsnummer"
-		substitutionGroup="choice-steuernummer-umsatzsteuer-id"
-		type="xs:normalizedString" />
-
 	<xs:element name="unternehmer">
 		<xs:complexType>
 			<xs:sequence>
@@ -39,7 +29,9 @@
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="firmen-name"
-								type="xs:normalizedString" />
+								type="xs:normalizedString" minOccurs="0"/>
+							<xs:element name="vorname" type="xs:normalizedString" minOccurs="0"></xs:element>
+							<xs:element name="nachname" type="xs:normalizedString" minOccurs="0"></xs:element>
 							<xs:element name="postleitzahl"
 								type="xs:positiveInteger" />
 							<xs:element name="stadt" type="xs:normalizedString" />
@@ -51,7 +43,8 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:element ref="choice-steuernummer-umsatzsteuer-id" />
+				<xs:element name="steuernummer" type="xs:normalizedString" minOccurs="0"/>
+				<xs:element name="umsatzsteuer-identifikationsnummer" type="xs:normalizedString" minOccurs="0"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -82,7 +75,7 @@
 			<xs:sequence>
 				<xs:element name="bruttobetrag" type="rechnungsbetrag-type" />
 				<xs:element name="nettobetrag" type="rechnungsbetrag-type" minOccurs="0"/>
-				<xs:element name="mehrwertsteuer-gesamt" type="rechnungsbetrag-type" />
+				<xs:element name="mehrwertsteuer-gesamt" type="rechnungsbetrag-type" minOccurs="0"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -110,6 +103,11 @@
 		</xs:complexType>
 	</xs:element>
 
+	<!-- leere element -->
+	<xs:complexType name="barzahlung-type">
+		<xs:attribute name="barzahlungid" type="xs:positiveInteger"></xs:attribute>
+	</xs:complexType>
+
 	<xs:element name="zahlungsart">
 		<xs:complexType>
 			<xs:all>
@@ -120,6 +118,7 @@
 				<xs:element name="blz" type="xs:normalizedString" minOccurs="0"/>
 				<xs:element name="kontonummer" type="xs:normalizedString" minOccurs="0"/>
 				<xs:element name="bitcoin-adresse" type="xs:normalizedString" minOccurs="0"/>
+				<xs:element name="barzahlung" type="barzahlung-type" minOccurs="0"/>
 			</xs:all>
 		</xs:complexType>
 	</xs:element>
