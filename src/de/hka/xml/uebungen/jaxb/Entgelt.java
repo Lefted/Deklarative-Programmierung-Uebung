@@ -26,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *       <sequence>
  *         <element name="bruttobetrag" type="{uebung3}rechnungsbetrag-type"/>
  *         <element name="nettobetrag" type="{uebung3}rechnungsbetrag-type" minOccurs="0"/>
- *         <element name="mehrwertsteuer-gesamt" type="{uebung3}rechnungsbetrag-type"/>
+ *         <element name="mehrwertsteuer-gesamt" type="{uebung3}rechnungsbetrag-type" minOccurs="0"/>
  *       </sequence>
  *     </restriction>
  *   </complexContent>
@@ -47,7 +47,7 @@ public class Entgelt {
     @XmlElement(required = true)
     protected RechnungsbetragType bruttobetrag;
     protected RechnungsbetragType nettobetrag;
-    @XmlElement(name = "mehrwertsteuer-gesamt", required = true)
+    @XmlElement(name = "mehrwertsteuer-gesamt")
     protected RechnungsbetragType mehrwertsteuerGesamt;
 
     /**

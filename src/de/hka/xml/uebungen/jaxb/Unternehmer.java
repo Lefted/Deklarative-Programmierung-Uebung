@@ -8,11 +8,9 @@
 package de.hka.xml.uebungen.jaxb;
 
 import java.math.BigInteger;
-import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlElementRef;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
@@ -35,7 +33,9 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             <complexContent>
  *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 <sequence>
- *                   <element name="firmen-name" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *                   <element name="firmen-name" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *                   <element name="vorname" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *                   <element name="nachname" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *                   <element name="postleitzahl" type="{http://www.w3.org/2001/XMLSchema}positiveInteger"/>
  *                   <element name="stadt" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
  *                   <element name="strasse" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
@@ -48,7 +48,8 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             </complexContent>
  *           </complexType>
  *         </element>
- *         <element ref="{uebung3}choice-steuernummer-umsatzsteuer-id"/>
+ *         <element name="steuernummer" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         <element name="umsatzsteuer-identifikationsnummer" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *       </sequence>
  *     </restriction>
  *   </complexContent>
@@ -60,15 +61,21 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "anschrift",
-    "choiceSteuernummerUmsatzsteuerId"
+    "steuernummer",
+    "umsatzsteuerIdentifikationsnummer"
 })
 @XmlRootElement(name = "unternehmer")
 public class Unternehmer {
 
     @XmlElement(required = true)
     protected Unternehmer.Anschrift anschrift;
-    @XmlElementRef(name = "choice-steuernummer-umsatzsteuer-id", namespace = "uebung3", type = JAXBElement.class)
-    protected JAXBElement<?> choiceSteuernummerUmsatzsteuerId;
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    @XmlSchemaType(name = "normalizedString")
+    protected String steuernummer;
+    @XmlElement(name = "umsatzsteuer-identifikationsnummer")
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    @XmlSchemaType(name = "normalizedString")
+    protected String umsatzsteuerIdentifikationsnummer;
 
     /**
      * Ruft den Wert der anschrift-Eigenschaft ab.
@@ -95,31 +102,51 @@ public class Unternehmer {
     }
 
     /**
-     * Ruft den Wert der choiceSteuernummerUmsatzsteuerId-Eigenschaft ab.
+     * Ruft den Wert der steuernummer-Eigenschaft ab.
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link Object }{@code >}
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link String }
      *     
      */
-    public JAXBElement<?> getChoiceSteuernummerUmsatzsteuerId() {
-        return choiceSteuernummerUmsatzsteuerId;
+    public String getSteuernummer() {
+        return steuernummer;
     }
 
     /**
-     * Legt den Wert der choiceSteuernummerUmsatzsteuerId-Eigenschaft fest.
+     * Legt den Wert der steuernummer-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link Object }{@code >}
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link String }
      *     
      */
-    public void setChoiceSteuernummerUmsatzsteuerId(JAXBElement<?> value) {
-        this.choiceSteuernummerUmsatzsteuerId = value;
+    public void setSteuernummer(String value) {
+        this.steuernummer = value;
+    }
+
+    /**
+     * Ruft den Wert der umsatzsteuerIdentifikationsnummer-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getUmsatzsteuerIdentifikationsnummer() {
+        return umsatzsteuerIdentifikationsnummer;
+    }
+
+    /**
+     * Legt den Wert der umsatzsteuerIdentifikationsnummer-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setUmsatzsteuerIdentifikationsnummer(String value) {
+        this.umsatzsteuerIdentifikationsnummer = value;
     }
 
 
@@ -133,7 +160,9 @@ public class Unternehmer {
      *   <complexContent>
      *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       <sequence>
-     *         <element name="firmen-name" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+     *         <element name="firmen-name" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+     *         <element name="vorname" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+     *         <element name="nachname" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
      *         <element name="postleitzahl" type="{http://www.w3.org/2001/XMLSchema}positiveInteger"/>
      *         <element name="stadt" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
      *         <element name="strasse" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
@@ -152,6 +181,8 @@ public class Unternehmer {
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
         "firmenName",
+        "vorname",
+        "nachname",
         "postleitzahl",
         "stadt",
         "strasse",
@@ -162,10 +193,16 @@ public class Unternehmer {
     })
     public static class Anschrift {
 
-        @XmlElement(name = "firmen-name", required = true)
+        @XmlElement(name = "firmen-name")
         @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
         @XmlSchemaType(name = "normalizedString")
         protected String firmenName;
+        @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+        @XmlSchemaType(name = "normalizedString")
+        protected String vorname;
+        @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+        @XmlSchemaType(name = "normalizedString")
+        protected String nachname;
         @XmlElement(required = true)
         @XmlSchemaType(name = "positiveInteger")
         protected BigInteger postleitzahl;
@@ -210,6 +247,54 @@ public class Unternehmer {
          */
         public void setFirmenName(String value) {
             this.firmenName = value;
+        }
+
+        /**
+         * Ruft den Wert der vorname-Eigenschaft ab.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getVorname() {
+            return vorname;
+        }
+
+        /**
+         * Legt den Wert der vorname-Eigenschaft fest.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setVorname(String value) {
+            this.vorname = value;
+        }
+
+        /**
+         * Ruft den Wert der nachname-Eigenschaft ab.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getNachname() {
+            return nachname;
+        }
+
+        /**
+         * Legt den Wert der nachname-Eigenschaft fest.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setNachname(String value) {
+            this.nachname = value;
         }
 
         /**

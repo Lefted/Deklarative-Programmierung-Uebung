@@ -34,6 +34,7 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         <element name="blz" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         <element name="kontonummer" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         <element name="bitcoin-adresse" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         <element name="barzahlung" type="{uebung3}barzahlung-type" minOccurs="0"/>
  *       </all>
  *     </restriction>
  *   </complexContent>
@@ -71,6 +72,7 @@ public class Zahlungsart {
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String bitcoinAdresse;
+    protected BarzahlungType barzahlung;
 
     /**
      * Ruft den Wert der bank-Eigenschaft ab.
@@ -238,6 +240,30 @@ public class Zahlungsart {
      */
     public void setBitcoinAdresse(String value) {
         this.bitcoinAdresse = value;
+    }
+
+    /**
+     * Ruft den Wert der barzahlung-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link BarzahlungType }
+     *     
+     */
+    public BarzahlungType getBarzahlung() {
+        return barzahlung;
+    }
+
+    /**
+     * Legt den Wert der barzahlung-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BarzahlungType }
+     *     
+     */
+    public void setBarzahlung(BarzahlungType value) {
+        this.barzahlung = value;
     }
 
 }

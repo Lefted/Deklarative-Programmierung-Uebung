@@ -7,12 +7,7 @@
 
 package de.hka.xml.uebungen.jaxb;
 
-import javax.xml.namespace.QName;
-import jakarta.xml.bind.JAXBElement;
-import jakarta.xml.bind.annotation.XmlElementDecl;
 import jakarta.xml.bind.annotation.XmlRegistry;
-import jakarta.xml.bind.annotation.adapters.NormalizedStringAdapter;
-import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -32,9 +27,6 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _ChoiceSteuernummerUmsatzsteuerId_QNAME = new QName("uebung3", "choice-steuernummer-umsatzsteuer-id");
-    private final static QName _Steuernummer_QNAME = new QName("uebung3", "steuernummer");
-    private final static QName _UmsatzsteuerIdentifikationsnummer_QNAME = new QName("uebung3", "umsatzsteuer-identifikationsnummer");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: de.hka.xml.uebungen.jaxb
@@ -154,6 +146,16 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link BarzahlungType }
+     * 
+     * @return
+     *     the new instance of {@link BarzahlungType }
+     */
+    public BarzahlungType createBarzahlungType() {
+        return new BarzahlungType();
+    }
+
+    /**
      * Create an instance of {@link Zahlungsarten }
      * 
      * @return
@@ -171,47 +173,6 @@ public class ObjectFactory {
      */
     public Rechnungen.Rechnung createRechnungenRechnung() {
         return new Rechnungen.Rechnung();
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Object }{@code >}
-     * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link Object }{@code >}
-     */
-    @XmlElementDecl(namespace = "uebung3", name = "choice-steuernummer-umsatzsteuer-id")
-    public JAXBElement<Object> createChoiceSteuernummerUmsatzsteuerId(Object value) {
-        return new JAXBElement<>(_ChoiceSteuernummerUmsatzsteuerId_QNAME, Object.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}
-     * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link String }{@code >}
-     */
-    @XmlElementDecl(namespace = "uebung3", name = "steuernummer", substitutionHeadNamespace = "uebung3", substitutionHeadName = "choice-steuernummer-umsatzsteuer-id")
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSteuernummer(String value) {
-        return new JAXBElement<>(_Steuernummer_QNAME, String.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}
-     * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link String }{@code >}
-     */
-    @XmlElementDecl(namespace = "uebung3", name = "umsatzsteuer-identifikationsnummer", substitutionHeadNamespace = "uebung3", substitutionHeadName = "choice-steuernummer-umsatzsteuer-id")
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createUmsatzsteuerIdentifikationsnummer(String value) {
-        return new JAXBElement<>(_UmsatzsteuerIdentifikationsnummer_QNAME, String.class, null, value);
     }
 
 }
