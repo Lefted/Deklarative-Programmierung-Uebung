@@ -1,10 +1,10 @@
-<html xmlns:ps="http://schemas.microsoft.com/powershell/2004/04">
-<body>
-<h2>My CD Collection</h2>
-<table border="1">
-<tr bgcolor="#9acd32">
-<th style="text-align:left">Title</th><th style="text-align:left">Artist</th>
-</tr>
-</table>
-</body>
-</html>
+<?xml version="1.0" encoding="UTF-8"?>
+<bug-tracking>
+	<project>
+		<defect created="2001-08-17T08:12:55" level="5">
+			<owner>David Bowman</owner>
+			<description>Malfunctional control of EVA pod</description>
+			<status>open</status>
+		</defect>
+	</project>
+</bug-tracking>

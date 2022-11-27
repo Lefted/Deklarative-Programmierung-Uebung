@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rechnungen
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="uebung3 Uebung3.xsd"
-	xmlns="uebung3"
 	name="XML">
 	<rechnung>
 		<unternehmer>
@@ -435,7 +432,7 @@
 			<umsatzsteuer-identifikationsnummer>DE112233449</umsatzsteuer-identifikationsnummer>
 		</unternehmer>
 		<leistungs-empfaenger>
-			<anrede>Heern</anrede>
+			<anrede>Herrn</anrede>
 			<nachname>M&#x00FC;ller-L&#x00FC;denscheid</nachname>
 			<postleitzahl>17777</postleitzahl>
 			<stadt>Dammhausen</stadt>

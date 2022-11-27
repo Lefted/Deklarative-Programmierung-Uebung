@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rechnungen>
+	<rechnung>
+		<ausstellungsdatum>2017-01-15</ausstellungsdatum>
+		<rechnungsnummer>657321</rechnungsnummer>
+		<entgelt>
+			<bruttobetrag>
+				<betrag>962.22</betrag>
+				<waehrung>EUR</waehrung>
+			</bruttobetrag>
+		</entgelt>
+		<leistungs-empfaenger>
+			<anrede>Frau</anrede>
+			<vorname>Sybille</vorname>
+			<nachname>Sonder-Suttelrau</nachname>
+			<postleitzahl>77070</postleitzahl>
+			<stadt>Siedelsuderstadt</stadt>
+			<strasse>Am Süttelbach</strasse>
+			<haus-nummer>17</haus-nummer>
+		</leistungs-empfaenger>
+		<abrechnungs-positionen>
+			<abrechnungs-position positionsnummer="1">
+				<leistung>Antike Holzwürmer</leistung>
+				<gesamt-preis>
+					<betrag>150.00</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+			</abrechnungs-position>
+			<abrechnungs-position positionsnummer="2">
+				<leistung>Holzwurmfutter</leistung>
+				<gesamt-preis>
+					<betrag>34.45</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+			</abrechnungs-position>
+			<abrechnungs-position positionsnummer="3">
+				<leistung>Steinlaus, Petrophaga lorioti</leistung>
+				<gesamt-preis>
+					<betrag>777.77</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+			</abrechnungs-position>
+		</abrechnungs-positionen>
+	</rechnung>
+	<rechnung>
+		<ausstellungsdatum>2017-08-08</ausstellungsdatum>
+		<rechnungsnummer>98-798-7987</rechnungsnummer>
+		<entgelt>
+			<bruttobetrag>
+				<betrag>621.94</betrag>
+				<waehrung>EUR</waehrung>
+			</bruttobetrag>
+		</entgelt>
+		<abrechnungs-positionen>
+			<abrechnungs-position positionsnummer="1">
+				<leistung>Grippemittel Tumifla</leistung>
+				<gesamt-preis>
+					<betrag>360.00</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+			</abrechnungs-position>
+			<abrechnungs-position positionsnummer="2">
+				<leistung>Abführmittel Wech damit</leistung>
+				<gesamt-preis>
+					<betrag>199.98</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+			</abrechnungs-position>
+			<abrechnungs-position positionsnummer="3">
+				<leistung>Energieriegel Satto</leistung>
+				<gesamt-preis>
+					<betrag>11.96</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+			</abrechnungs-position>
+		</abrechnungs-positionen>
+	</rechnung>
+	<rechnung>
+		<ausstellungsdatum>2017-10-19</ausstellungsdatum>
+		<rechnungsnummer>893 213 11</rechnungsnummer>
+		<entgelt>
+			<bruttobetrag>
+				<betrag>878.49</betrag>
+				<waehrung>EUR</waehrung>
+			</bruttobetrag>
+		</entgelt>
+		<abrechnungs-positionen>
+			<abrechnungs-position positionsnummer="1">
+				<leistung>Urne, Eiche massiv</leistung>
+				<gesamt-preis>
+					<betrag>299.99</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+			</abrechnungs-position>
+			<abrechnungs-position positionsnummer="2">
+				<leistung>Überführung Krematorium Feuerbach inkl. Begleitpersonal
+				</leistung>
+				<gesamt-preis>
+					<betrag>349.00</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+			</abrechnungs-position>
+			<abrechnungs-position positionsnummer="3">
+				<leistung>Dekoration</leistung>
+				<gesamt-preis>
+					<betrag>149.50</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+			</abrechnungs-position>
+			<abrechnungs-position positionsnummer="4">
+				<leistung>Trauerkarten inkl. Briefmarken</leistung>
+				<gesamt-preis>
+					<betrag>80.00</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+			</abrechnungs-position>
+		</abrechnungs-positionen>
+	</rechnung>
+	<rechnung>
+		<ausstellungsdatum>2017-08-09</ausstellungsdatum>
+		<rechnungsnummer>1</rechnungsnummer>
+		<entgelt>
+			<bruttobetrag>
+				<betrag>3598.99</betrag>
+				<waehrung>EUR</waehrung>
+			</bruttobetrag>
+		</entgelt>
+		<abrechnungs-positionen>
+			<abrechnungs-position positionsnummer="1">
+				<leistung>Vogelschnepper, um 1600</leistung>
+				<gesamt-preis>
+					<betrag>3499.00</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+			</abrechnungs-position>
+			<abrechnungs-position positionsnummer="2">
+				<leistung>Schusser, um 1720</leistung>
+				<gesamt-preis>
+					<betrag>99.99</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+			</abrechnungs-position>
+		</abrechnungs-positionen>
+	</rechnung>
+	<rechnung>
+		<ausstellungsdatum>2016-12-31</ausstellungsdatum>
+		<rechnungsnummer>47-11</rechnungsnummer>
+		<entgelt>
+			<bruttobetrag>
+				<betrag>19.99</betrag>
+				<waehrung>EUR</waehrung>
+			</bruttobetrag>
+		</entgelt>
+		<leistungs-empfaenger>
+			<anrede>Herrn</anrede>
+			<nachname>Müller-Lüdenscheid</nachname>
+			<postleitzahl>17777</postleitzahl>
+			<stadt>Dammhausen</stadt>
+			<strasse>Badstrasse</strasse>
+			<haus-nummer>3</haus-nummer>
+		</leistungs-empfaenger>
+		<abrechnungs-positionen>
+			<abrechnungs-position positionsnummer="1">
+				<leistung>Gummiente "Quietsch"</leistung>
+				<gesamt-preis>
+					<betrag>19.99</betrag>
+					<waehrung>EUR</waehrung>
+				</gesamt-preis>
+			</abrechnungs-position>
+		</abrechnungs-positionen>
+	</rechnung>
+</rechnungen>
